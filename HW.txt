@@ -1,0 +1,86 @@
+	Task1
+
+CREATE TABLE `mytestdatabase`.`teachers` ( `number` VARCHAR(255) NOT NULL , `name` TEXT NOT NULL );
+CREATE TABLE `mytestdatabase`.`students` ( `number` INT(255) NOT NULL ,  `name` TEXT NOT NULL ,  `rating` INT(255),  `lecture code` INT(255) NOT NULL );
+CREATE TABLE `mytestdatabase`.`lessons` (`lecture code` INT(255), `lesson` TEXT NOT NULL, `number` VARCHAR(255) );
+
+
+	Task2
+
+INSERT INTO teachers VALUES (1, "Monika Geller")
+INSERT INTO teachers VALUES (2, "Phoebe Boufet")
+INSERT INTO teachers VALUES (3, "Rachel Green")
+INSERT INTO teachers VALUES (4, "Ross Geller")
+INSERT INTO teachers VALUES (5, "Joye Tribiany")
+INSERT INTO teachers VALUES (6, "Chandler Bing")
+
+INSERT INTO students VALUES (1, "Alex Bruno",4,3)
+INSERT INTO students VALUES (2, "Bruno Mars",5,6)
+INSERT INTO students VALUES (3, "Penny WISE",2,1)
+INSERT INTO students VALUES (4, "Alise Magic",4,2)
+INSERT INTO students VALUES (5, "Catie McLee",5,4)
+INSERT INTO students VALUES (6, "Monty Berns",3,5)
+
+INSERT INTO lessons VALUES (3, 'Household', 1)
+INSERT INTO lessons VALUES (6, 'Music', 2)
+INSERT INTO lessons VALUES (1, 'Sewing', 3)
+INSERT INTO lessons VALUES (2, 'Paleontology', 4)
+INSERT INTO lessons VALUES (4, 'Acting Club', 5)
+INSERT INTO lessons VALUES (5, 'Math', 6)
+
+
+	Task3
+SELECT * FROM `teachers`
+SELECT * FROM `students`
+SELECT * FROM `lessons`
+
+
+	Task4
+
+INSERT INTO students VALUES (7,'Mari Colmbs',4,3)
+INSERT INTO students VALUES (8,'Angel Batista',4,5) 
+INSERT INTO students VALUES (9, 'Dexter Morgan',3,5)
+INSERT INTO students VALUES (10, 'Sheldon Cooper',4,3)
+INSERT INTO students VALUES (11, 'Ted Mosby', 4,6)
+INSERT INTO students VALUES (12, 'Lily Oldryn', 5,6)
+INSERT INTO students VALUES (13, 'Jessica Rabbit',3,1)
+INSERT INTO students VALUES (14, 'Alec Boldwin', 5,2)
+INSERT INTO students VALUES (15, 'Jensen Acles', 4,4) 
+INSERT INTO students VALUES (16, 'Hannah Montana', 5,1)
+INSERT INTO students VALUES (17, 'Coco Chanel', 4,2)
+INSERT INTO students VALUES (18, 'Pinky Pigson',4,1)
+INSERT INTO students VALUES (19, 'Perrot Polly',3,6)
+INSERT INTO students VALUES (20, 'Chip Cranchy',5,5)
+
+
+	Task5
+
+SELECT name FROM students
+
+
+	Task6
+UPDATE students SET rating = null WHERE number IN(8,9,13,16)
+
+
+	Task7
+
+SELECT * FROM `students` WHERE `rating` IS null
+
+
+	Task8
+
+SELECT * FROM `students` WHERE `age` > 19
+
+	Task9
+
+SELECT * FROM `students` ORDER BY `age` ASC
+
+
+	Task10
+
+SELECT * FROM `students` ORDER BY `age` DESC
+
+
+	Task11
+
+SELECT * FROM `students` WHERE `rating` = NOT NULL ORDER BY `age` DESC                   («наю что лажа, эту таску хз как делать!)
